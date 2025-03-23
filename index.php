@@ -1,3 +1,7 @@
+<?php 
+   require "connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -14,9 +18,9 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="css/style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
@@ -33,6 +37,7 @@
    <body>
       <?php include_once "inc/header.php"; ?>
       <?php include_once "inc/projects.php"; ?>
+      <?php include_once "inc/skills.php"; ?>
       <?php include_once "inc/portfolio.php"; ?>
       <?php include_once "inc/contact.php"; ?>
       <?php include_once "inc/project_box.php"; ?>

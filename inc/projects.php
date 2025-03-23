@@ -6,40 +6,36 @@
                </div>
             </div>
          </div>
-         <div class="container">
-            <div class="services_section_2">
-               <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="box_main ">
-                        <div class="app_icon"><img src="images/icon-1.png"></div>
-                        <div class="app_icon_1"><img src="images/icon-1.png"></div>
-                        <h4 class="services_text">App Design</h4>
+            <div class="services_section">
+               <div class="portfolio_section_2">
+                  <div class="row">
+                     <div class="col-md-8">
+                        <div class="container_main">
+                           <img src="images/spesialterapi.png" style="align-items: center; min-width: 20%; min-height: 20%; max-width: 40%; max-height: 40%;"  alt="Spesial Terapi" class="image">
+                           <div class="overlay">
+                              <div class="text">
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a target="_blank" title="Spesial Terapi" href="https://play.google.com/store/apps/details?id=com.spesialkaryamandiri.spesialterapi">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="box_main ">
-                        <div class="app_icon"><img src="images/icon-2.png"></div>
-                        <div class="app_icon_1"><img src="images/icon-6.png"></div>
-                        <h4 class="services_text">Website Design</h4>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="box_main ">
-                        <div class="app_icon"><img src="images/icon-3.png"></div>
-                        <div class="app_icon_1"><img src="images/icon-7.png"></div>
-                        <h4 class="services_text">HTML & CSS</h4>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="box_main ">
-                        <div class="app_icon"><img src="images/icon-4.png"></div>
-                        <div class="app_icon_1"><img src="images/icon-8.png"></div>
-                        <h4 class="services_text">Application Asset Design</h4>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/EduSMA.png" title="EduSMA" alt="EduSMA" class="image">
+                           <div class="overlay">
+                              <div class="text">
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a target="_blank" title="EduSMA" href="https://drive.google.com/file/d/1hqkSUudyyZLE_iDqV6b-tAtfdSoYR0c1/view?usp=sharing">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
-               <div class="readmore_bt"><a href="#">Read More</a></div>
             </div>
+                  <div class="seemore_bt"><a title="Click for More Projects" target="_blank" href="https://github.com/Dio-Damar-Danendra-Portofolio">See More</a></div>
          </div>
       </div>
-      

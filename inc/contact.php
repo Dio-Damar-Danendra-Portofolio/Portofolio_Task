@@ -2,18 +2,19 @@
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
-                  <h1 class="contact_taital">My <span class="contact_taital_1">Contact</span></h1>
+                  <h1 class="contact_taital"><span class="contact_taital_1 decoration-none">Contact Me</span></h1>
                </div>
             </div>
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-md-12">
                      <div class="mail_section_1">
-                        <input type="text" class="mail_text" placeholder="Your Name" name="Your Name">
-                        <input type="text" class="mail_text" placeholder="Your Email" name="Your Email">
-                        <input type="text" class="mail_text" placeholder="Your Phone" name="Your Phone">
-                        <textarea class="massage-bt" placeholder="Your Massage" rows="5" id="comment" name="Your Massage"></textarea>
-                        <div class="send_bt"><a href="#">Send Now</a></div>
+                        <input type="text" class="mail_text" placeholder="Insert Your Full Name" name="full_name" id="full_name" required>
+                        <input type="email" class="mail_text" placeholder="Insert Your Email" name="email" id="email" required>
+                        <input type="text" class="mail_text" placeholder="Insert Your Phone" id="phone" name="phone" required>
+                        <input type="text" class="mail_text" placeholder="Insert Your Message Subject" id="subject" name="subject" required>
+                        <textarea class="massage-bt" placeholder="Type Your Message" rows="10" id="message" name="message"></textarea>
+                        <div class="send_bt"><a href="mailto: diodamar14102000@gmail.com?subject=<?php echo $_GET['subject']; ?>&message=<?php echo $_GET['message']; ?>">Send Now</a></div>
                      </div>
                   </div>
                </div>
