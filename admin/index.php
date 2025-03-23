@@ -1,19 +1,5 @@
 <?php 
-            $page = isset($_GET['page']) ? $_GET['page'] : 'index';
-            $file = "content/{$page}.php";
-
-                if (file_exists($file)) {
-                    $content = file_get_contents($file); 
-                    
-                } else { 
-                $content = "<div class=\"row d-flex flex-wrap justify-content-center align-self-sm-center vh-100 bg-danger\">
-                    <div class=\"col-xl-12 align-self-xl-center bg-danger\">
-                        <h1 class=\"text-white text-center align-items-baseline\">Page not available...</h1>
-                    </div>
-                </div>";
-             } ?>
-<?php 
-   require "../connection.php";
+    require_once "../connection.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,45 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container-fluid">
-            <div class="row p-2 bg-warning d-flex flex-wrap justify-content-center align-self-center">
-                <div class="col-md-2 p-2">
-                    <a href="/" class="text-decoration-none">
-                        <img src="" alt="logo" loading="eager">
-                    </a>
-                </div>
-                    <div class="col-md-2 p-2">
-                        <a href="index.php" class="btn btn-primary btn-md">Home</a>
-                    </div>
-                    <div class="col-md-2 p-2">
-                        <a href="?page=project_list" class="btn btn-primary btn-md">Projects</a>
-                    </div>
-                    <div class="col-md-2 p-2">
-                        <a href="?page=skill_list" class="btn btn-primary btn-md">Skills</a>
-                    </div>
-                    <div class="col-md-2 p-2">
-                        <a href="?page=portfolio_list" class="btn btn-primary btn-md">Portfolio</a>
-                    </div>
-                    <div class="col-md-2 p-2">
-                        <a href="../index.php" class="btn btn-primary btn-md">Viewer</a>
-                    </div>
-            </div>
-        </div>
-    </header>
+    <?php include "inc/header.php"; ?>
     <main>
         <div class="container-fluid fixed-center">
-            <?php echo $content; ?>
-        </div>
-    </main>
-    <footer>
-        <div class="container-fluid">
-            <div class="row p-2 bg-warning d-flex flex-wrap justify-content-center align-self-center">
-                <div class="col-lg-8 text-center bg-warning w-100 align-items-center">
-                    <h4>&copy; <?php echo date('Y'); ?> Dio Damar Danendra</h4>
-                </div>
+            <div class="row d-flex flex-wrap justify-content-center align-self-sm-center vh-100 bg-info">
+                <div class="col-xl-12 align-self-xl-center bg-info">
+                <h1 class="text-black text-center align-items-baseline">Ini merupakan laman khusus untuk pengelola portofolio</h1>
             </div>
         </div>
-    </footer>
+        </div>
+    </main>
+    <?php include "inc/footer.php"; ?>
 </body>
 </html>

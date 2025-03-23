@@ -1,5 +1,10 @@
 <?php 
    require "connection.php";
+
+   $queryProject = mysqli_query($conn, "SELECT * FROM projects;");
+   $rowProject = mysqli_fetch_all($queryProject, MYSQLI_ASSOC);
+
+   
 ?>
 
 <!DOCTYPE html>
