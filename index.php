@@ -10,7 +10,7 @@
    $querySkill = mysqli_query($conn, "SELECT categories.category_name AS category, skills.* FROM skills JOIN categories ON categories.id = skills.category_id;");
    $rowSkill = mysqli_fetch_all($querySkill, MYSQLI_ASSOC);
 
-   if ($_POST['send']) {
+   if (isset($_POST['send'])) {
       $full_name = $_POST['full_name'];
       $email = $_POST['email'];
       $phone = $_POST['phone'];
