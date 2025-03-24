@@ -23,6 +23,12 @@
       if (isset($message) && isset($subject) && isset($email)) {
          mail("diodamar14102000@gmail.com", $subject, $message, $email);
       }
+
+      $queryInsert = mysqli_query($conn, "INSERT INTO contact (full_name, email, phone, subject, message) 
+      VALUES ('$full_name', '$email', '$phone', '$subject', '$message')");
+
+      $rowInsert = mysqli_fetch_assoc($queryInsert);
+      
    }
 ?>
 
