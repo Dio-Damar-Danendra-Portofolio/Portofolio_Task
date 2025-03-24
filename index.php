@@ -4,7 +4,32 @@
    $queryProject = mysqli_query($conn, "SELECT * FROM projects;");
    $rowProject = mysqli_fetch_all($queryProject, MYSQLI_ASSOC);
 
+   $queryPortfolio = mysqli_query($conn, "SELECT * FROM portfolio;");
+   $rowPortfolio = mysqli_fetch_all($queryPortfolio, MYSQLI_ASSOC);
    
+   $querySkill = mysqli_query($conn, "SELECT categories.category_name AS category, skills.* FROM skills JOIN categories ON categories.id = skills.category_id;");
+   $rowSkill = mysqli_fetch_all($querySkill, MYSQLI_ASSOC);
+
+   if (isset($_POST['send'])) {
+      $full_name = $_POST['full_name'];
+      $email = $_POST['email'];
+      $phone = $_POST['phone'];
+      $subject = $_POST['subject'];
+      $message = $_POST['message'];
+
+      $checkEmail = mysqli_query($conn, "SELECT email FROM contact WHERE email = '$email';");
+		$rowEmail = mysqli_fetch_assoc($checkEmail);
+
+      if (isset($message) && isset($subject) && isset($email)) {
+         mail("diodamar14102000@gmail.com", $subject, $message, $email);
+      }
+
+      $queryInsert = mysqli_query($conn, "INSERT INTO contact (full_name, email, phone, subject, message) 
+      VALUES ('$full_name', '$email', '$phone', '$subject', '$message')");
+
+      $rowInsert = mysqli_fetch_assoc($queryInsert);
+      
+   }
 ?>
 
 <!DOCTYPE html>
