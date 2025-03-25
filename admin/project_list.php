@@ -3,7 +3,7 @@
     $queryProject = mysqli_query($conn, "SELECT * FROM projects");
     $rowProject = mysqli_fetch_all($queryProject, MYSQLI_ASSOC);
 
-    if (isset($_POST['delete_button'])) {
+    if (isset($_POST['idDelete'])) {
       $id = $_GET['idDelete'];
       $queryDeleteProject = mysqli_query($conn, "DELETE FROM projects WHERE id = $id");
       header("Location: ../admin/project_list.php");
@@ -54,7 +54,7 @@
                                 <td><?php echo $project['project_link']; ?></td>
                                 <td>
                                     <a href="add_edit_project.php?idEdit=<?php echo $project['id']?>" class="btn btn-success btn-sm">Edit Project</a>
-                                    <a href="add_edit_project.php?idDelete=<?php echo $project['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Project</a>
+                                    <a href="project_list.php?idDelete=<?php echo $project['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Project</a>
                                 </td>
                             </tr>
                             <?php } ?>

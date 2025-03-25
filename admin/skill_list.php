@@ -3,10 +3,15 @@
    $querySkill = mysqli_query($conn, "SELECT skills.*, categories.category_name FROM skills LEFT JOIN categories ON skills.category_id = categories.id;");
    $rowSkill = mysqli_fetch_all($querySkill, MYSQLI_ASSOC);
 
-   if (isset($_POST['delete_button'])) {
+   if (isset($_GET['idDelete'])) {
     $id = $_GET['idDelete'];
     $queryDeleteSkill = mysqli_query($conn, "DELETE FROM skills WHERE id = $id");
-    header("Location: ../admin/skill_list.php");
+
+    if ($queryDeleteSkill) {
+        header("Location: ../admin/skill_list.php");
+    } else {
+        echo 'ERROR';
+    }
   }
 ?>
 <!DOCTYPE html>
@@ -50,7 +55,7 @@
                                 <td><?php echo $skill['category_name']; ?></td>
                                 <td>
                                     <a href="add_edit_skill.php?idEdit=<?php echo $skill['id']?>" class="btn btn-success btn-sm">Edit Skill</a>
-                                    <a href="add_edit_skill.php?idDelete=<?php echo $skill['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Skill</a>
+                                    <a href="skill_list.php?idDelete=<?php echo $skill['id']?>" name="delete" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?')">Delete Skill</a>
                                 </td>
                             </tr>
                         <?php } ?>

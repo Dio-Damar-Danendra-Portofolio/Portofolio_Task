@@ -10,7 +10,7 @@
             <div class="portfolio_section_2">
                <div class="row">
                   <?php foreach ($rowSkill as $skill) { ?>
-                     <?php if ($skill['category'] == "Web Programming (Frontend)" || $skill['category'] == "Web Programming (Backend)") { ?>
+                     <?php if ($skill['category'] == "Web Programming (Front-end)" || $skill['category'] == "Web Programming (Back-end)") { ?>
                         <div class="col-lg-3 col-sm-6">
                            <div class="box_main">
                               <div class="app_icon"><img src="images/icon-3.png"></div>
@@ -20,7 +20,7 @@
                         </div>
                         <?php } else { ?>
                            <div class="col-lg-3 col-sm-6">
-                              <div class="box_main ">
+                              <div class="box_main">
                               <div class="app_icon"><img src="images/icon-4.png"></div>
                               <div class="app_icon_1"><img src="images/icon-8.png"></div>
                               <h4 class="services_text"><?php echo $skill['skill_type']?></h4>

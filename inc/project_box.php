@@ -1,3 +1,4 @@
+</div>
 <div class="project_box">
          <div class="container">
             <div class="project_main">

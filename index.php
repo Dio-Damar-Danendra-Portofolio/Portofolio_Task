@@ -9,6 +9,9 @@
    
    $querySkill = mysqli_query($conn, "SELECT categories.category_name AS category, skills.* FROM skills JOIN categories ON categories.id = skills.category_id");
    $rowSkill = mysqli_fetch_all($querySkill, MYSQLI_ASSOC);
+   
+   $queryProfession = mysqli_query($conn, "SELECT * FROM professions");
+   $rowProfession = mysqli_fetch_all($queryProfession, MYSQLI_ASSOC);
 
    if (isset($_POST['send'])) {
       $full_name = $_POST['full_name'];
