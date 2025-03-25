@@ -8,7 +8,7 @@
         $skill_type = $_POST['skill_type'];
         $category_id = $_POST['category_id'];
     
-        $insert = mysqli_query($conn, "INSERT INTO skills (skill_type, category_id) VALUES ('$skill_type', '$category_id');");
+        $insert = mysqli_query($conn, "INSERT INTO skills (skill_type, category_id) VALUES ('$skill_type', '$category_id')");
     
         if ($insert) {
           header("Location: ../admin/skill_list.php");
@@ -24,7 +24,7 @@
             if (isset($_GET['idEdit'])) {
               $id = $_GET['idEdit'];
               $skill_type = $_POST['skill_type'];
-              $category_id = mysqli_insert_id($conn); $_POST['category_id'];
+              $category_id = $_POST['category_id'];
         
               $queryUpdateSkill = mysqli_query($conn, "UPDATE skills SET skill_type='$skill_type', category_id='$category_id' WHERE id = $id;");
               header("Location: ../admin/skill_list.php");
@@ -67,8 +67,9 @@
                     </div>
                     <div class="col-sm-10">
                         <select class="form-select" name="category_id" id="category_id" required>
+                          <option value="">Please Select Category</option>
                         <?php foreach ($rowCategory as $categories) { ?>
-                          <option value="<?php echo $categories['id']?>"><?php echo $categories['category_name']?></option>
+                          <option value="<?php echo $categories['id']?>" <?= isset($_GET['idEdit']) && $_GET['idEdit'] ? 'selected' : ''; ?>><?php echo $categories['category_name']?></option>
                         <?php } ?>
                         </select>
                     </div>

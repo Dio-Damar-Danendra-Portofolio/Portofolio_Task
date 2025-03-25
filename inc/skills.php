@@ -1,4 +1,4 @@
-<div class="services_section layout_padding" id="skills">
+<div class="portfolio_section layout_padding" id="skills">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
@@ -7,17 +7,17 @@
             </div>
          </div>
          <div class="container">
-            <div class="services_section_2">
+            <div class="portfolio_section_2">
                <div class="row">
                   <?php foreach ($rowSkill as $skill) { ?>
                      <?php if ($skill['category'] == "Web Programming (Frontend)" || $skill['category'] == "Web Programming (Backend)") { ?>
                         <div class="col-lg-3 col-sm-6">
                            <div class="box_main">
                               <div class="app_icon"><img src="images/icon-3.png"></div>
-                           <div class="app_icon_1"><img src="images/icon-7.png"></div>
-                           <h4 class="services_text"><?php echo $skill['skill_type']?></h4>
+                              <div class="app_icon_1"><img src="images/icon-7.png"></div>
+                              <h4 class="services_text"><?php echo $skill['skill_type']?></h4>
+                           </div>
                         </div>
-                     </div>
                         <?php } else { ?>
                            <div class="col-lg-3 col-sm-6">
                               <div class="box_main ">

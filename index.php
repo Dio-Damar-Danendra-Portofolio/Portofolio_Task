@@ -1,13 +1,13 @@
 <?php 
    require "connection.php";
 
-   $queryProject = mysqli_query($conn, "SELECT * FROM projects;");
+   $queryProject = mysqli_query($conn, "SELECT * FROM projects");
    $rowProject = mysqli_fetch_all($queryProject, MYSQLI_ASSOC);
 
-   $queryPortfolio = mysqli_query($conn, "SELECT * FROM portfolio;");
+   $queryPortfolio = mysqli_query($conn, "SELECT * FROM portfolio");
    $rowPortfolio = mysqli_fetch_all($queryPortfolio, MYSQLI_ASSOC);
    
-   $querySkill = mysqli_query($conn, "SELECT categories.category_name AS category, skills.* FROM skills JOIN categories ON categories.id = skills.category_id;");
+   $querySkill = mysqli_query($conn, "SELECT categories.category_name AS category, skills.* FROM skills JOIN categories ON categories.id = skills.category_id");
    $rowSkill = mysqli_fetch_all($querySkill, MYSQLI_ASSOC);
 
    if (isset($_POST['send'])) {

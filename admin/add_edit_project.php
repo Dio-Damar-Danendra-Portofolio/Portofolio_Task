@@ -94,7 +94,7 @@
                         <label class="form-label" for="project_image" >Project Image: </label>
                     </div>
                     <div class="col-sm-10">
-                        <input type="file" class="form-control" name="project_image" id="project_image" required>
+                        <input type="file" class="form-control" name="project_image" id="project_image" required value="<?= isset($_GET['idEdit']) && $_GET['idEdit'] ? $rowEdit['project_image'] : ''?> ">
                         <?php if (isset($_GET['idEdit']) && $_GET['idEdit']) { ?>
                         <img src="../uploads/<?php echo $rowEdit['project_image'] ?>" alt="Image Not Available">
                         <?php }?> 
