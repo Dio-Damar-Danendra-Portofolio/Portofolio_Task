@@ -3,14 +3,16 @@
                <div class="container-fluid">
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
                      <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="0" class="<?php echo $first ? 'active' : ''; ?>"></li>
+                        <li data-target="#myCarousel" data-slide-to="1" class="<?php echo $first ? 'active' : ''; ?>"></li>
+                        <li data-target="#myCarousel" data-slide-to="2" class="<?php echo $first ? 'active' : ''; ?>"></li>
+                        <li data-target="#myCarousel" data-slide-to="3" class="<?php echo $first ? 'active' : ''; ?>"></li>
                      </ol>
                      <div class="carousel-inner">
-                           <?php foreach ($rowProfession as $professions) { ?>
-                              <div class="carousel-item active">
+                           <?php
+                              $first = true;
+                           foreach ($rowProfession as $professions) { ?>
+                              <div class="carousel-item <?php echo $first ? 'active' : ''; ?>">
                               <div class="container-fluid">
                               <div class="row">
                                  <div class="col-md-6">
@@ -32,14 +34,15 @@
                               </div>
                            </div>
                         </div>
-                        <?php } ?>
+                        <?php $first = false; // Make sure only the first item is active 
+                        } ?>
                      </div>
                   </div>
                </div>
             </section>
             <div class="container">
                <div class="video_bt">
-                  <div class="play_icon"><img src="images/play-icon.png" onclick=""></div>
+                  <div class="play_icon"><img src="images/play-icon.png" class="carousel-control" role="button" onclick="animasi()"></div>
                </div>
             </div>
          </div>

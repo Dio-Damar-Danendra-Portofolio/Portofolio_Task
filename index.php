@@ -67,6 +67,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
       <!-- font awesome css -->
       <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    </head>
    <body>
       <?php include_once "inc/header.php"; ?>
@@ -88,9 +90,12 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script>
-         $('#myCarousel').carousel({
-            interval: false
-         });
+         function animasi() {
+            $('#myCarousel').carousel({
+               interval: 3000, // Change slide every 3 seconds
+               pause: 'mouseenter'
+            });
+         }
          
          //scroll slides on swipe for touch enabled devices
          

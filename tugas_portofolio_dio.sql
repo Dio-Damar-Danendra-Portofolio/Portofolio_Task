@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2025 at 08:08 AM
+-- Generation Time: Mar 25, 2025 at 08:31 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -53,8 +53,17 @@ CREATE TABLE `contact` (
   `full_name` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
-  `subject` text DEFAULT NULL
+  `subject` text DEFAULT NULL,
+  `message` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `full_name`, `email`, `phone`, `subject`, `message`) VALUES
+(1, 'Eliza Humaira', 'elizahmr@gmail.com', '08596859685', 'asweawewa', 'sdjfrhsdlkfjhslkdfjsdlkfj'),
+(2, 'Eliza Humaira', 'elizahmr@gmail.com', '08596859685', 'asweawewa', 'sdjfrhsdlkfjhslkdfjsdlkfj');
 
 -- --------------------------------------------------------
 
@@ -75,8 +84,30 @@ CREATE TABLE `portfolio` (
 
 INSERT INTO `portfolio` (`id`, `portfolio_name`, `portfolio_image`, `portfolio_link`) VALUES
 (1, 'Kategori Headphones', 'Katalog Headphones.png', 'https://github.com/Dio-Damar-Danendra-Portofolio/Katalog-Headphones'),
-(2, 'EduSMA', 'Ilg5M6uY2AQ.jpg', 'https://www.youtube.com/watch?v=Ilg5M6uY2AQ'),
-(3, 'Spesial Terapi', 'spesialterapi.png', 'https://play.google.com/store/apps/details?id=com.spesialkaryamandiri.spesialterapi');
+(2, 'EduSMA', '67e228386a018_Demo EduSMA.jpg', 'https://www.youtube.com/watch?v=Ilg5M6uY2AQ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `professions`
+--
+
+CREATE TABLE `professions` (
+  `id` int(11) NOT NULL,
+  `profession_type` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `professions`
+--
+
+INSERT INTO `professions` (`id`, `profession_type`) VALUES
+(1, 'a Programmer'),
+(2, 'an App Developer'),
+(3, 'a Web Developer'),
+(4, 'an Asset Designer'),
+(5, 'a Product Owner'),
+(6, 'a Front-End Developer');
 
 -- --------------------------------------------------------
 
@@ -96,8 +127,7 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `project_name`, `project_link`, `project_image`) VALUES
-(1, 'Spesial Terapi', 'https://play.google.com/store/apps/details?id=com.spesialkaryamandiri.spesialterapi', 'Spesial Terapi.jpg'),
-(2, 'EduSMA', 'https://www.youtube.com/watch?v=Ilg5M6uY2AQ', 'Demo EduSMA.jpg');
+(2, 'EduSMA', 'https://www.youtube.com/watch?v=Ilg5M6uY2AQ', '67e226142e26b_EduSMA.PNG');
 
 -- --------------------------------------------------------
 
@@ -121,7 +151,8 @@ INSERT INTO `skills` (`id`, `skill_type`, `category_id`) VALUES
 (3, 'JavaScript', 1),
 (4, 'PHP', 2),
 (5, 'Adobe Illustrator', 3),
-(6, 'Adobe Photoshop', 3);
+(7, 'Adobe Premiere Pro', 4),
+(8, 'React', 1);
 
 --
 -- Indexes for dumped tables
@@ -143,6 +174,12 @@ ALTER TABLE `contact`
 -- Indexes for table `portfolio`
 --
 ALTER TABLE `portfolio`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `professions`
+--
+ALTER TABLE `professions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -172,13 +209,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `professions`
+--
+ALTER TABLE `professions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `projects`
@@ -190,17 +233,7 @@ ALTER TABLE `projects`
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `skills`
---
-ALTER TABLE `skills`
-  ADD CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON UPDATE CASCADE;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
