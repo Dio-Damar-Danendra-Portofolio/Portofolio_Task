@@ -3,10 +3,16 @@
    $queryPortfolio = mysqli_query($conn, "SELECT * FROM portfolio");
    $rowPortfolio = mysqli_fetch_all($queryPortfolio, MYSQLI_ASSOC);
 
-   if (isset($_POST['idDelete'])) {
+   if (isset($_GET['idDelete'])) {
     $id = $_GET['idDelete'];
     $queryDeletePortfolio = mysqli_query($conn, "DELETE FROM portfolio WHERE id = $id");
-    header("Location: ../admin/portfolio_list.php");
+
+    if ($queryDeletePortfolio) {
+        header("Location: ../admin/portfolio_list.php");
+    }
+    else {
+        echo "ERROR";
+    }
   }
 ?>
 <!DOCTYPE html>

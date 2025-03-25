@@ -3,11 +3,16 @@
     $queryProject = mysqli_query($conn, "SELECT * FROM projects");
     $rowProject = mysqli_fetch_all($queryProject, MYSQLI_ASSOC);
 
-    if (isset($_POST['idDelete'])) {
+    if (isset($_GET['idDelete'])) {
       $id = $_GET['idDelete'];
       $queryDeleteProject = mysqli_query($conn, "DELETE FROM projects WHERE id = $id");
-      header("Location: ../admin/project_list.php");
+
+      if ($queryDeleteProject) {
+        header("Location: ../admin/project_list.php");
+    } else {
+        echo "ERROR";
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
