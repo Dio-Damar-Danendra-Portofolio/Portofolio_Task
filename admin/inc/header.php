@@ -19,7 +19,7 @@
                         <a href="portfolio_list.php" class="btn btn-primary btn-md">Portfolio</a>
                     </div>
                     <div class="col-md-2 p-2">
-                        <a href="../index.php" class="btn btn-primary btn-md">Viewer</a>
+                        <a href="../index.php" target="_self" class="btn btn-primary btn-md">Viewer</a>
                     </div>
             </div>
         </div>

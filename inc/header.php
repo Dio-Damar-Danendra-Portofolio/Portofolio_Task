@@ -23,7 +23,7 @@
                         <a class="nav-link" href="#contact">Contact Me</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="admin/index.php" target="_self">Portfolio Manager</a>
+                        <a class="nav-link" href="admin/index.php" target="_self" onclick="return confirm('This page will redirect you to the admin page...')">Portfolio Manager</a>
                      </li>
                   </ul>
                </div>

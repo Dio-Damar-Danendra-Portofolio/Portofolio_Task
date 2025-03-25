@@ -109,8 +109,4 @@
          });
       </script>
    </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
