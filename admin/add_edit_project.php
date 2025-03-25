@@ -99,7 +99,7 @@
                 </div>
                 <div class="row mb-3">
                 <div class="col-md-2">
-                  <?php if (isset($_GET['id'])) { ?>
+                  <?php if (isset($_GET['idEdit'])) { ?>
                     <button type="submit" class="btn btn-md btn-primary" name="edit_button">Edit</button>
                   <?php }  else { ?>
                     <button type="submit" class="btn btn-md btn-primary" name="save_button">Save</button>
