@@ -46,7 +46,11 @@
                     echo "Upload failed... Try again...";
                 }
               }
+<<<<<<< HEAD
               $queryUpdatePortfolio = mysqli_query($conn, "UPDATE portfolio SET portfolio_name='$portfolio_name', portfolio_link='$portfolio_link', $fillQUpdatePortfolio WHERE id = $id;");
+=======
+              $queryUpdateportfolio = mysqli_query($conn, "UPDATE portfolio SET portfolio_name='$portfolio_name', portfolio_link='$portfolio_link', $fillQUpdatePortfolio WHERE id = $id;");
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
               header("Location: ../admin/portfolio_list.php");
             }
           }
@@ -60,7 +64,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<<<<<<< HEAD
     <title><?php echo isset($_GET['idEdit']) ? 'Edit' : 'Add' ?> Portfolio - Portofolio Manager</title>
+=======
+    <title><?php echo isset($_GET['id']) ? 'Edit' : 'Add' ?> Portfolio - Portofolio Manager</title>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -71,7 +79,11 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
+<<<<<<< HEAD
               <h5 class="card-title"><?php echo isset($_GET['idEdit']) ? 'Edit' : 'Add' ?> Portfolio</h5>
+=======
+              <h5 class="card-title"><?php echo isset($_GET['id']) ? 'Edit' : 'Add' ?> Portfolio</h5>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
               <form action="" method="post" enctype="multipart/form-data">
                 <div class="row mb-3">
                     <div class="col-sm-2">
@@ -91,6 +103,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-2">
+<<<<<<< HEAD
                         <label class="form-label" for="portfolio_image" >Portfolio Image: </label>
                     </div>
                     <div class="col-sm-10">
@@ -103,6 +116,17 @@
                 <div class="row mb-3">
                 <div class="col-md-2">
                   <?php if (isset($_GET['idEdit'])) { ?>
+=======
+                        <label class="form-label" for="portfolio_image" >portfolio Image: </label>
+                    </div>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" name="portfolio_image" id="portfolio_image" required>
+                    </div>   
+                </div>
+                <div class="row mb-3">
+                <div class="col-md-2">
+                  <?php if (isset($_GET['id'])) { ?>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
                     <button type="submit" class="btn btn-md btn-primary" name="edit_button">Edit</button>
                   <?php }  else { ?>
                     <button type="submit" class="btn btn-md btn-primary" name="save_button">Save</button>

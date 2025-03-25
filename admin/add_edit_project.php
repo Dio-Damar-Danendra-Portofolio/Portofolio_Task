@@ -95,6 +95,7 @@
                     </div>
                     <div class="col-sm-10">
                         <input type="file" class="form-control" name="project_image" id="project_image" required>
+<<<<<<< HEAD
                         <?php if (isset($_GET['idEdit']) && $_GET['idEdit']) { ?>
                         <img src="../uploads/<?php echo $rowEdit['project_image'] ?>" alt="Image Not Available">
                         <?php }?> 
@@ -104,6 +105,13 @@
                 <div class="row mb-3">
                 <div class="col-md-2">
                   <?php if (isset($_GET['id'])) { ?>
+=======
+                    </div>   
+                </div>
+                <div class="row mb-3">
+                <div class="col-md-2">
+                  <?php if (isset($_GET['idEdit'])) { ?>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
                     <button type="submit" class="btn btn-md btn-primary" name="edit_button">Edit</button>
                   <?php }  else { ?>
                     <button type="submit" class="btn btn-md btn-primary" name="save_button">Save</button>
@@ -122,4 +130,8 @@
     </main>
     <?php include "inc/footer.php"; ?>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad

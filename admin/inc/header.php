@@ -2,12 +2,20 @@
         <div class="container-fluid">
             <div class="row p-2 bg-warning d-flex flex-wrap justify-content-center align-self-center">
                 <div class="col-md-2 p-2">
+<<<<<<< HEAD
                     <a href="../admin/index.php" class="text-decoration-none">
+=======
+                    <a href="/" class="text-decoration-none">
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
                         <h4 class="fw-bold text-dark">Dio Damar Danendra</h4>
                     </a>
                 </div>
                     <div class="col-md-2 p-2">
+<<<<<<< HEAD
                         <a href="../admin/index.php" class="btn btn-primary btn-md">Home</a>
+=======
+                        <a href="index.php" class="btn btn-primary btn-md">Home</a>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
                     </div>
                     <div class="col-md-2 p-2">
                         <a href="project_list.php" class="btn btn-primary btn-md">Projects</a>

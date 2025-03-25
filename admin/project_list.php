@@ -31,7 +31,11 @@
                 <div class="card-title">
                     <h5>My Projects</h5>
                     <div class="table table-responsive">
+<<<<<<< HEAD
                         <a href="add_edit_project.php" class="btn btn-primary mb-2">Add Project</a>
+=======
+                        <a href="?page=add_edit_project" class="btn btn-primary mb-2">Add Project</a>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
                         <table class="table table-striped table-bordered text-center" id="myTable">
                         <thead>
                             <tr>
@@ -50,11 +54,19 @@
                             <tr>
                                 <td><?php echo $no++; ?></td>
                                 <td><?php echo $project['project_name']; ?></td>
+<<<<<<< HEAD
                                 <td><img width="283" src="../uploads/<?php echo $project['project_image']; ?>" alt="Image not availale"></td>
                                 <td><?php echo $project['project_link']; ?></td>
                                 <td>
                                     <a href="add_edit_project.php?idEdit=<?php echo $project['id']?>" class="btn btn-success btn-sm">Edit Project</a>
                                     <a href="add_edit_project.php?idDelete=<?php echo $project['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Project</a>
+=======
+                                <td><img src="../uploads/<?php echo $project['project_image']; ?>" alt="Image not availale"></td>
+                                <td><?php echo $project['project_link']; ?></td>
+                                <td>
+                                    <a href="add_edit_project.php&idEdit=<?php echo $project['id']?>" class="btn btn-success btn-sm">Edit Project</a>
+                                    <button name="delete_button" type="button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Project</button>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
                                 </td>
                             </tr>
                             <?php } ?>

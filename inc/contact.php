@@ -11,6 +11,7 @@
                      <div class="mail_section_1">
                         <form action="" method="post">
                         <input type="text" class="mail_text" placeholder="Insert Your Full Name" name="full_name" id="full_name" required>
+<<<<<<< HEAD
                         <input type="email" class="mail_text" placeholder="Insert Your Email Address" name="email" id="email" required>
                         <input type="text" class="mail_text" placeholder="Insert Your Phone Number" id="phone" name="phone" required>
                         <input type="text" class="mail_text" placeholder="Insert Your Message Subject" id="subject" name="subject" required>
@@ -20,6 +21,14 @@
                               <button type="submit" class="btn btn-warning btn-md" name="send">Send Message</button>
                               <button type="reset" class="btn btn-danger btn-md" name="reset_button">Reset</button>
                            </div>
+=======
+                        <input type="email" class="mail_text" placeholder="Insert Your Email" name="email" id="email" required>
+                        <input type="text" class="mail_text" placeholder="Insert Your Phone" id="phone" name="phone" required>
+                        <input type="text" class="mail_text" placeholder="Insert Your Message Subject" id="subject" name="subject" required>
+                        <textarea class="massage-bt" placeholder="Type Your Message" rows="10" id="message" name="message"></textarea>
+                        <div class="send_bt">
+                           <button class="btn btn-warning btn-md" name="send">Send Now!</button>
+>>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
                         </div>
                         </form>
                      </div>
