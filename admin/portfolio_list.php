@@ -48,7 +48,6 @@
                                 <td><?php echo $no++; ?></td>
                                 <td><?php echo $portfolio['portfolio_name']; ?></td>
                                 <td><?php echo $portfolio['portfolio_link']; ?></td>
-<<<<<<< HEAD
                                 <td>
                                     <img width="283" src="../uploads/<?php echo $portfolio['portfolio_image']; ?>" alt="">
                                 </td>
@@ -56,10 +55,6 @@
                                     <a href="add_edit_portfolio.php?idEdit=<?php echo $portfolio['id']?>" class="btn btn-success btn-sm">Edit Portfolio</a>
                                     <a href="add_edit_portfolio.php?idDelete=<?php echo $portfolio['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Portfolio</a>
                                 </td>
-=======
-                                <td></td>
-                                <td></td>
->>>>>>> 250fbb1cc053c1750eff2acd66f43990a853f0ad
                             </tr>
                         <?php } ?>
                         </tbody>
