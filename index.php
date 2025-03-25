@@ -26,9 +26,10 @@
 
       $queryInsert = mysqli_query($conn, "INSERT INTO contact (full_name, email, phone, subject, message) 
       VALUES ('$full_name', '$email', '$phone', '$subject', '$message')");
-
-      $rowInsert = mysqli_fetch_assoc($queryInsert);
-      
+   
+      if ($queryInsert) {
+         header("Location: index.php");
+      }
    }
 ?>
 
