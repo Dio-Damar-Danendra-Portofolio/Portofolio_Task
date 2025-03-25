@@ -71,7 +71,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title"><?php echo isset($_GET['id']) ? 'Edit' : 'Add' ?> Project</h5>
+              <h5 class="card-title"><?php echo isset($_GET['idEdit']) ? 'Edit' : 'Add' ?> Project</h5>
               <form action="" method="post" enctype="multipart/form-data">
                 <div class="row mb-3">
                     <div class="col-sm-2">
