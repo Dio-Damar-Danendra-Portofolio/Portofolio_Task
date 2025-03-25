@@ -1,12 +1,12 @@
 
-<div class="services_section layout_padding" id="projects">
+<div class="portfolio_section layout_padding" id="projects">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
-                  <h1 class="services_taital">My <span class="portfolio_taital_1">Projects</span></h1>
+                  <h1 class="portfolio_taital">My <span class="portfolio_taital_1">Projects</span></h1>
                </div>
             </div>
-            <div class="services_section">
+            <div class="portfolio_section">
                <div class="portfolio_section_2">
                   <div class="row">
                      <?php foreach ($rowProject as $projects) { 
