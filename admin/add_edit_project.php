@@ -95,7 +95,11 @@
                     </div>
                     <div class="col-sm-10">
                         <input type="file" class="form-control" name="project_image" id="project_image" required>
+                        <?php if (isset($_GET['idEdit']) && $_GET['idEdit']) { ?>
+                        <img src="../uploads/<?php echo $rowEdit['portfolio_image'] ?>" alt="Image Not Available">
+                        <?php }?> 
                     </div>   
+                    
                 </div>
                 <div class="row mb-3">
                 <div class="col-md-2">

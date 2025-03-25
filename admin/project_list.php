@@ -53,8 +53,8 @@
                                 <td><img width="283" src="../uploads/<?php echo $project['project_image']; ?>" alt="Image not availale"></td>
                                 <td><?php echo $project['project_link']; ?></td>
                                 <td>
-                                    <a href="add_edit_project.php&idEdit=<?php echo $project['id']?>" class="btn btn-success btn-sm">Edit Project</a>
-                                    <a href="add_edit_project.php&idDelete=<?php echo $project['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Project</a>
+                                    <a href="add_edit_project.php?idEdit=<?php echo $project['id']?>" class="btn btn-success btn-sm">Edit Project</a>
+                                    <a href="add_edit_project.php?idDelete=<?php echo $project['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Project</a>
                                 </td>
                             </tr>
                             <?php } ?>

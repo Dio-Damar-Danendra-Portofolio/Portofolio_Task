@@ -91,15 +91,18 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label class="form-label" for="portfolio_image" >portfolio Image: </label>
+                        <label class="form-label" for="portfolio_image" >Portfolio Image: </label>
                     </div>
                     <div class="col-sm-10">
-                        <input type="file" class="form-control" name="portfolio_image" id="portfolio_image" required>
-                    </div>   
+                        <input type="file" class="form-control" name="portfolio_image" id="portfolio_image" required value="<?= isset($_GET['idEdit']) && $_GET['idEdit'] ? $rowEdit['portfolio_image'] : ''; ?>">
+                        <?php if (isset($_GET['idEdit']) && $_GET['idEdit']) { ?>
+                      <img src="../uploads/<?php echo $rowEdit['portfolio_image'] ?>" alt="Image Not Available">
+                    <?php }?> 
+                      </div>  
                 </div>
                 <div class="row mb-3">
                 <div class="col-md-2">
-                  <?php if (isset($_GET['id'])) { ?>
+                  <?php if (isset($_GET['idEdit'])) { ?>
                     <button type="submit" class="btn btn-md btn-primary" name="edit_button">Edit</button>
                   <?php }  else { ?>
                     <button type="submit" class="btn btn-md btn-primary" name="save_button">Save</button>

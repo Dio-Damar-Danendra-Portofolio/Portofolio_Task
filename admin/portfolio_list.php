@@ -52,8 +52,8 @@
                                     <img width="283" src="../uploads/<?php echo $portfolio['portfolio_image']; ?>" alt="">
                                 </td>
                                 <td>
-                                    <a href="add_edit_portfolio.php&idEdit=<?php echo $project['id']?>" class="btn btn-success btn-sm">Edit Portfolio</a>
-                                    <a href="add_edit_portfolio.php&idDelete=<?php echo $project['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Portfolio</a>
+                                    <a href="add_edit_portfolio.php?idEdit=<?php echo $portfolio['id']?>" class="btn btn-success btn-sm">Edit Portfolio</a>
+                                    <a href="add_edit_portfolio.php?idDelete=<?php echo $portfolio['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Portfolio</a>
                                 </td>
                             </tr>
                         <?php } ?>

@@ -49,8 +49,8 @@
                                 <td><?php echo $skill['skill_type']; ?></td>
                                 <td><?php echo $skill['category_name']; ?></td>
                                 <td>
-                                    <a href="add_edit_skill.php&idEdit=<?php echo $skill['id']?>" class="btn btn-success btn-sm">Edit Skill</a>
-                                    <a href="add_edit_skill.php&idDelete=<?php echo $skill['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Skill</a>
+                                    <a href="add_edit_skill.php?idEdit=<?php echo $skill['id']?>" class="btn btn-success btn-sm">Edit Skill</a>
+                                    <a href="add_edit_skill.php?idDelete=<?php echo $skill['id']?>" name="delete_button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want to delete this data?');">Delete Skill</a>
                                 </td>
                             </tr>
                         <?php } ?>
